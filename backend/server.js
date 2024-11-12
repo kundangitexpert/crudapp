@@ -11,8 +11,8 @@ mongoose
   .connect(process.env.URI)
   .then(() => {
     // console.log("connected to database");
-    app.listen(process.env.PORT || 8000, (err) => {
-      if (err) console.log(err);
+    app.listen(process.env.PORT || 8000,'0.0.0.0', () => {
+      // if (err) console.log(err);
       // console.log("running successfully at", process.env.PORT);
     });
   })
